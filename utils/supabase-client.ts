@@ -13,7 +13,7 @@ export const getActiveProductsWithPrices = async (): Promise<
 > => {
   const { data, error } = await supabase
   .from('products')
-  .select('*,id,name,active,image,description,url,price')
+  .select('*')
 
   if (error) {
     console.log(error.message);

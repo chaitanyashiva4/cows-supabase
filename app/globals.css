@@ -5,11 +5,48 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 10px;
-    padding: 10px;
+    margin: 18px;
+    width: 150px;
+    height: 250px;
 }
-
+.home-layout {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
 .img {
     width: 150px;
     height: 100px;
+}
+.card-name1 {
+    background-color: #0d2e6a;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    height: 60px;
+    width: 80;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card-name2 {
+    background-color: #0d2e6a;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    height: 80px;
+    width: 80;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.cows-logo {
+    height: 40px;
+    width: 70px;
+}
+@media screen and (min-width:768px) {
+    .home-layout {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 }

@@ -4,6 +4,7 @@ import { LogoutCurrentUser, getCurrentUser } from "@/utils/getuser";
 import { User } from "@supabase/supabase-js";
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
+import Home from "./Home";
 
 export const Header = () => {
   const router = useRouter();
@@ -33,7 +34,7 @@ export const Header = () => {
   }, [users]);
 
   return (
-    <div className="navbar bg-primary text-primary-content">
+    <div className="navbar text-primary-content">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,7 +49,9 @@ export const Header = () => {
             <li><a href="/account">Account</a></li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Dealwallet</a>
+        <div style={{textAlign:"center"}}>
+        <a className="btn btn-ghost normal-case text-xl text-center" href="/"><img src="https://www.prideofcows.com/wp-content/themes/cake/images/logo.png" className="cows-logo"/></a>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <div className="form-control">
