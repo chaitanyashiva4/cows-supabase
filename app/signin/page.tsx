@@ -33,21 +33,21 @@ export default function SignIn() {
     if (data) {
       return router.replace("/");
     }
-    else{
+    else {
       alert(error)
     }
   };
-  console.log("user",user)
+  console.log("user", user)
 
   if (user) {
-      return router.replace("/");
-    }
+    return router.replace("/");
+  }
 
   return (<>
     <div className="flex justify-center mt-3">
-      <div className="card w-96 bg-base-100 shadow-xl border">
-        <div className="card-body">
-          <h2 className="card-title justify-center"><img alt='products' src="logo.png" width={140} height={140} /></h2>
+      <div className="shadow p-5 rounded-md">
+        <h2 className="card-title justify-center"><img alt='products' src="logo.png" width={140} height={140} /></h2>
+        <div>
           <form onSubmit={(event) => handleLogin(event)}>
             <dl>
               <dt className="text-center font-bold text-2xl">Login</dt>
@@ -67,17 +67,15 @@ export default function SignIn() {
                 <button className="btn btn-primary font-semibold" type="submit">Login</button>
               </dd>
               <dd className="text-center text-blue-600 font-semibold underline"><a href="">Forgot Password?</a></dd>
+              <div className="mt-4">
+                <ul>
+                  <li><button className="btn btn-outline btn-primary w-80"><FcGoogle size={20} />&nbsp;<span className="text-slate-500">Sign In With Google</span></button></li>
+                  <li><button className="btn btn-outline btn-primary w-80 mt-3"><FaApple size={25} />&nbsp;<span className="text-slate-500">Sign In With Apple</span></button></li>
+                  <li><button className="btn btn-outline btn-primary w-80 mt-3">Sign In With OTP</button></li>
+                </ul>
+              </div>
             </dl>
           </form>
-          <div className="card-actions justify-center mt-3">
-            <div>
-              <ul>
-                <li><button className="btn btn-outline btn-primary w-80"><FcGoogle size={20} />&nbsp;<span className="text-slate-500">Sign In With Google</span></button></li>
-                <li><button className="btn btn-outline btn-primary w-80 mt-3"><FaApple size={25} />&nbsp;<span className="text-slate-500">Sign In With Apple</span></button></li>
-                <li><button className="btn btn-outline btn-primary w-80 mt-3">Sign In With OTP</button></li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
     </div>

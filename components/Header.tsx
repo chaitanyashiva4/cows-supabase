@@ -66,7 +66,7 @@ export const Header = () => {
         {users ?
           <button onClick={logout}>Logout</button>
           :
-          <a href="/signin"><button>Login</button></a>
+          <a href="/login"><button>Login</button></a>
         }
       </div>
     </div>
