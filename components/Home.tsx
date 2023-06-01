@@ -19,7 +19,7 @@ export default function Home({ products }: Props) {
                 <p style={{ color: "#7a716a" }}>{prd.description}</p>
               </div>
               <div className="card-actions justify-end">
-                <a href={prd.url}>
+                <a>
                 <button className="btn btn-primary">Buy Now</button>
                 </a>
               </div>
