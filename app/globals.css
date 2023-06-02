@@ -1,11 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+.cows-icon {
+    height: 50px;
+    width: 60px;
+}
 .footer {
-    background-color:#041933;
+    background-color: #041933;
     padding-right: 5px;
     display: flex;
-    color:#cdd8d9;
+    color: #cdd8d9;
     margin: 10px !important;
     font-size: 14px;
     margin-right: 18px;
@@ -15,13 +24,17 @@
     width: auto;
     border-radius: 10px;
 }
+
 .footer-icons {
     height: 20px;
+    margin: 5px;
 }
-.footer-items{
+
+.footer-items {
     display: flex;
     flex-direction: column;
-} 
+}
+
 .footer-ordernow {
     height: 70px;
     background-color: #2c3f56;
@@ -32,6 +45,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .card {
     display: flex;
     justify-content: space-between;
@@ -40,15 +54,19 @@
     width: 150px;
     height: 250px;
 }
+
 .home-layout {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
+
 .img {
     width: 150px;
     height: 100px;
 }
+
 .card-name1 {
     background-color: #0d2e6a;
     color: white;
@@ -59,6 +77,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
 .card-name2 {
     background-color: #0d2e6a;
     color: white;
@@ -69,10 +88,12 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
 .cows-logo {
     height: 40px;
     width: 70px;
 }
+
 @media screen and (min-width:768px) {
     .home-layout {
         display: flex;
@@ -80,11 +101,12 @@
         align-items: center;
         justify-content: center;
     }
+
     .footer {
-        background-color:#041933;
+        background-color: #041933;
         display: flex;
         padding: 10px;
-        color:#cdd8d9;
+        color: #cdd8d9;
         margin: 10px;
         border-radius: 10px;
         width: auto;
