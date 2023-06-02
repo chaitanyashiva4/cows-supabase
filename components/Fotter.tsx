@@ -2,7 +2,7 @@ import { BsFillHouseFill, BsFillCartFill, BsPlusLg,BsPersonCircle, BsFillCreditC
 export const Footer = () => {
   return (
     <div className="btm-nav footer">
-      <a className="footer-items">
+      <a className="footer-items" href="/">
         <BsFillHouseFill className="footer-icons"/>
         <span className="btm-nav-label">Home</span>
       </a>
@@ -12,7 +12,7 @@ export const Footer = () => {
       </a>
       <div className="footer-ordernow">
         <BsPlusLg className="footer-icons"/>
-        <span className="btm-nav-label" style={{ fontSize: "10px" }}>Order Now</span>
+        <span className="btm-nav-label" style={{ fontSize: "10px" }}>Order<br /> Now</span>
       </div>
       <a>
        <BsFillCreditCardFill className="footer-icons"/>
