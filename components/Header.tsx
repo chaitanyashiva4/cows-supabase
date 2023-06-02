@@ -4,7 +4,16 @@ import { LogoutCurrentUser, getCurrentUser } from "@/utils/getuser";
 import { User } from "@supabase/supabase-js";
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
-import Home from "./Home";
+import { BiMenu } from 'react-icons/bi';
+import { BiHomeAlt2 } from 'react-icons/bi';
+import { BiCartAlt } from 'react-icons/bi';
+import { BiShoppingBag } from 'react-icons/bi';
+import { BsWalletFill } from 'react-icons/bs'
+import { FaWallet } from 'react-icons/fa'
+import { BiSupport } from 'react-icons/bi'
+import { RxAvatar } from 'react-icons/rx'
+import { AiFillWechat } from 'react-icons/ai'
+import { FaWindowClose } from 'react-icons/fa'
 
 export const Header = () => {
   const router = useRouter();
@@ -33,8 +42,53 @@ export const Header = () => {
 
   }, [users]);
 
+
+
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
   return (
     <div className="navbar text-primary-content">
+
+      <div>
+        <div className="dropdown">
+          <label tabIndex={0} className="btn m-1" onClick={toggleDropdown}>
+            <BiMenu size={25} />
+          </label>
+          <ul
+            tabIndex={0}
+            className={`dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 ${isDropdownOpen ? 'block' : 'hidden'
+              }`}
+            style={{ backgroundColor: '#082648', marginTop: '-60px', width: '270px' }}
+          >
+            <div>
+              <li className="font-bold">
+                <a>
+                  <RxAvatar /> Hi <button onClick={closeDropdown} style={{marginLeft:'130px'}}><FaWindowClose size={25}/></button>
+                </a>
+              </li>
+              <li className="font-bold bg-white rounded-md text-inherit mb-2"><a><BiHomeAlt2 />HOME</a></li>
+              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><BiCartAlt />MY ORDER</a></li>
+              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><BiShoppingBag />PRODUCTS</a></li>
+              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><BsWalletFill />BILL INFO</a></li>
+              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><FaWallet />MY WALLET</a></li>
+              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><BiSupport />SUPPORT</a></li>
+              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><RxAvatar />ABOUT US</a></li>
+              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><AiFillWechat />REQUEST</a></li>
+            </div>
+          </ul>
+        </div>
+      
+      </div>
+
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -48,8 +102,8 @@ export const Header = () => {
             <li><a href="/account">Account</a></li>
           </ul>
         </div>
-        <div style={{textAlign:"center"}}>
-        <a className="btn btn-ghost normal-case text-xl text-center" href="/"><img src="https://www.prideofcows.com/wp-content/themes/cake/images/logo.png" className="cows-logo"/></a>
+        <div style={{ textAlign: "center" }}>
+          <a className="btn btn-ghost normal-case text-xl text-center" href="/"><img src="https://www.prideofcows.com/wp-content/themes/cake/images/logo.png" className="cows-logo" /></a>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
