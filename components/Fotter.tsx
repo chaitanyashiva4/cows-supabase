@@ -1,30 +1,27 @@
-
-
+import { BsFillHouseFill, BsFillCartFill, BsPlusLg,BsPersonCircle, BsFillCreditCardFill} from "react-icons/bs";
 export const Footer = () => {
-
   return (
-    <footer className="footer mt-4 p-10 bg-neutral text-neutral-content">
-      <div>
-        <span className="footer-title">Services</span>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
+    <div className="btm-nav footer">
+      <a className="footer-items">
+        <BsFillHouseFill className="footer-icons"/>
+        <span className="btm-nav-label">Home</span>
+      </a>
+      <a className="footer-items">
+        <BsFillCartFill className="footer-icons"/>
+        <span className="btm-nav-label">My Order</span>
+      </a>
+      <div className="footer-ordernow">
+        <BsPlusLg className="footer-icons"/>
+        <span className="btm-nav-label" style={{ fontSize: "10px" }}>Order Now</span>
       </div>
-      <div>
-        <span className="footer-title">Company</span>
-        <a className="link link-hover">About us</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
-      </div>
-      <div>
-        <span className="footer-title">Legal</span>
-        <a className="link link-hover">Terms of use</a>
-        <a className="link link-hover">Privacy policy</a>
-        <a className="link link-hover">Cookie policy</a>
-      </div>
-    </footer>
+      <a>
+       <BsFillCreditCardFill className="footer-icons"/>
+        <span>Bill Info</span>
+      </a>      
+      <a>
+      <BsPersonCircle className="footer-icons"/>
+      <span>Profile</span></a>
+    </div>
   )
 
 }

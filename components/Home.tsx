@@ -6,9 +6,8 @@ interface Props {
 }
 
 export default function Home({ products }: Props) {
-  console.log("products=====>",products)
   return (
-    <div className="home-layout">
+    <div className="home-layout" style={{margin:"5px"}}>
       {products?.map((prd: any) => {
         return (
           <div key={prd.id}>
