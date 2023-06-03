@@ -14,6 +14,8 @@ export default function Home({ products }: Props) {
     await router.push(`/productlanding  ?id=${product}`)
   }
   return (
+    <>
+    <h1 style={{color:"#0d2e6a",textAlign:"center",fontSize:"24px",fontWeight:"600",margin:"10px",padding:"10px"}}>Welcome To Pride Of Cows Family</h1>
     <div className="home-layout" style={{margin:"5px"}}>
       {products?.map((prd: any) => {
         return (
@@ -31,5 +33,6 @@ export default function Home({ products }: Props) {
         );
       })}
     </div>
+    </>
     )
 }
