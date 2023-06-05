@@ -28,8 +28,8 @@ export default function SignUp() {
 
   return (<>
     <div className="flex justify-center mt-3">
-      <div className="shadow p-5 rounded-md">
-        <h2 className="card-title justify-center"><img alt='products' src="./logo.png" width="140" height="140" /></h2>
+      <div className="shadow p-5 rounded-md border">
+        <h2 className="card-title justify-center"><img alt='products' src="https://www.prideofcows.com/wp-content/themes/cake/images/logo.png" width="140" height="140" /></h2>
         <form onSubmit={(event) => handleSignUp(event)}>
           <dl>
             <dt className="text-center font-bold text-2xl">Signup</dt>
