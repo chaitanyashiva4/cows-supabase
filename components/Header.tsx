@@ -64,9 +64,9 @@ export const Header = () => {
           </label>
           <ul
             tabIndex={0}
-            className={`dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 ${isDropdownOpen ? 'block' : 'hidden'
+            className={`dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 ms-1 ${isDropdownOpen ? 'block' : 'hidden'
               }`}
-            style={{ backgroundColor: '#082648', marginTop: '-60px', width: '270px' }}
+            style={{ backgroundColor: '#082648', marginTop: '-55px', width: '270px' }}
           >
             <div>
               <li className="font-bold">
@@ -74,15 +74,15 @@ export const Header = () => {
                   <RxAvatar /> Hi <button onClick={closeDropdown} style={{ marginLeft: '130px' }}><FaWindowClose size={25} /></button>
                 </a>
               </li>
-              <li className="font-bold bg-white rounded-md text-inherit mb-2"><a><BiHomeAlt2 />HOME</a></li>
-              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><BiCartAlt />MY ORDER</a></li>
-              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><BiShoppingBag />PRODUCTS</a></li>
-              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><BsWalletFill />BILL INFO</a></li>
-              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><FaWallet />MY WALLET</a></li>
-              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><BiSupport />SUPPORT</a></li>
-              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><RxAvatar />ABOUT US</a></li>
-              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><a><AiFillWechat />REQUEST</a></li>
-              <li className="font-bold bg-white rounded-md text-inherit	mb-2"><div className="navbars-end m-3 p-3">
+              <li className="font-bold bg-white rounded-md text-gray-500 mb-2"><a><BiHomeAlt2 />HOME</a></li>
+              <li className="font-bold bg-white rounded-md text-gray-500	mb-2"><a><BiCartAlt />MY ORDER</a></li>
+              <li className="font-bold bg-white rounded-md text-gray-500	mb-2"><a><BiShoppingBag />PRODUCTS</a></li>
+              <li className="font-bold bg-white rounded-md text-gray-500	mb-2"><a><BsWalletFill />BILL INFO</a></li>
+              <li className="font-bold bg-white rounded-md text-gray-500	mb-2"><a><FaWallet />MY WALLET</a></li>
+              <li className="font-bold bg-white rounded-md text-gray-500	mb-2"><a><BiSupport />SUPPORT</a></li>
+              <li className="font-bold bg-white rounded-md text-gray-500	mb-2"><a><RxAvatar />ABOUT US</a></li>
+              <li className="font-bold bg-white rounded-md text-gray-500	mb-2"><a><AiFillWechat />REQUEST</a></li>
+              <li className="font-bold bg-white rounded-md text-gray-500	mb-2"><div className="navbars-end m-1 justify-center">
                 {users ?
                   <button onClick={logout}>Logout</button>
                   :
