@@ -47,6 +47,10 @@ export default function ProductLanding(router: any) {
                         <h1 style={{color:"black",margin:"5px"}}>DIRECT FROM OUR FARM TO YOUR HOME</h1>
                         <p>{prd.product_benefit}</p>
                     </div>
+                    <div className="nutrition-chart-container" style={{margin:"10px",padding:"10px"}}>
+                        <h1>NUTRITION CHART</h1>
+                        <img src={prd.nutrition_chart} />
+                    </div>
                     </div>
                 )
             })}
