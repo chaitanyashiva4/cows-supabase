@@ -4,7 +4,7 @@ export const Footer = () => {
     <div className="btm-nav footer">
       <a className="footer-items" href="/">
         <BsFillHouseFill className="footer-icons" />
-        <span className="btm-nav-label">Home</span>
+        <span className="btm-nav-label">POC Home</span>
       </a>
       <a className="footer-items">
         <BsFillCartFill className="footer-icons"/>
@@ -14,13 +14,13 @@ export const Footer = () => {
         <BsPlusLg className="footer-icons"/>
         <span className="btm-nav-label" style={{ fontSize: "10px" }}>Order<br /> Now</span>
       </div>
-      <a className="mb-2">
+      <a className="footer-items">
        <BsFillCreditCardFill className="footer-icons"/>
-        <span>Bill Info</span>
+        <span className="btm-nav-label">Manage Orders</span>
       </a>      
-      <a className="mb-2">
+      <a className="footer-items">
       <BsPersonCircle className="footer-icons"/>
-      <span>Profile</span></a>
+      <span className="btm-nav-label">My Profile</span></a>
     </div>
   )
 

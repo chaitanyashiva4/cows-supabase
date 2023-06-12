@@ -11,7 +11,6 @@ interface Props {
 export default function Home({ products }: Props) {
   const router = useRouter();
   const productlanding = (product: any) => {
-    console.log(product)
     router.push(`/productlanding?id=${product}`)
   }
   return (
