@@ -97,7 +97,7 @@ export const Header = () => {
         <a href="/"><img src="https://www.prideofcows.com/wp-content/themes/cake/images/logo.png" alt='logo' className="cows-icon"/></a>
       </div>
         <div className="header-icons" style={{display:"flex",justifyContent:"space-between"}}>
-          <a><BsCart className="m-4"/></a>
+          <a href="/cart"><BsCart className="m-4"/></a>
           <a><BsBell className="m-4"/></a>
         </div>
     </div>
