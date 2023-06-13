@@ -1,4 +1,4 @@
-import { ProductWithPrice } from '@/types';
+import { Product, ProductWithPrice } from '@/types';
 import { Database } from '@/types_db';
 import {
   createBrowserSupabaseClient,
@@ -22,9 +22,7 @@ export const getActiveProductsWithPrices = async (): Promise<
   return (data as any) || [];
 };
 
-export const getActiveProductsById = async (id: any): Promise<
-  ProductWithPrice[]
-> => {
+export const getActiveProductsById = async (id: any) => {
   const { data, error } = await supabase
     .from('products')
     .select('*')
@@ -36,7 +34,7 @@ export const getActiveProductsById = async (id: any): Promise<
   return (data as any) || [];
 };
 export const insertProductsByUserId = async (customer_id:any,product_id: any): Promise<
-  ProductWithPrice[]
+  Product[]
 > => {
   console.log({'customer_id':customer_id,'product_id':product_id})
   const { data, error } = await supabase

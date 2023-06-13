@@ -1,7 +1,7 @@
 'use client';
 import { BsCurrencyRupee } from "react-icons/bs";
 import { User } from "@supabase/supabase-js";
-import { Product } from "@/types";
+import { Product, ProductWithPrice } from "@/types";
 import { getActiveProductsById, insertProductsByUserId } from "@/utils/supabase-client";
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
