@@ -22,7 +22,9 @@ export const getActiveProductsWithPrices = async (): Promise<
   return (data as any) || [];
 };
 
-export const getActiveProductsById = async (id: any) => {
+export const getActiveProductsById = async (id: any) : Promise<
+Product[]
+> => {
   const { data, error } = await supabase
     .from('products')
     .select('*')

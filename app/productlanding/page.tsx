@@ -12,7 +12,7 @@ interface Props {
 
 export default function ProductLanding(router: any) {
     const { id } = router.searchParams
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState <ProductWithPrice | []>([])
     const [users, setUsers] = useState<User | null>(null);
     useEffect(() => {
         const getProducts = async () => {
