@@ -8,7 +8,7 @@ import {
   upsertPriceRecord,
   manageSubscriptionStatusChange
 } from '@/utils/supabase-admin';
-
+export const runtime = 'edge'
 export async function POST(req: NextApiRequest, res: NextApiResponse) {
   const payload = await req.body;
   const { data, type } = payload

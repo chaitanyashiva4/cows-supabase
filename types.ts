@@ -4,7 +4,10 @@ export interface PageMeta {
   description: string;
   cardImage: string;
 }
-
+export interface Cart {
+  id:string;
+  customer_id:string;
+}
 export interface Customer {
   id: string /* primary key */;
   stripe_customer_id?: string;

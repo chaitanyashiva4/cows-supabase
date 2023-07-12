@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { headers, cookies } from "next/headers";
 
 import type { Database } from "@/lib/database.types";
-
+export const runtime = 'edge'
 export async function POST(request: Request) {
   const { content } = await request.json();
 

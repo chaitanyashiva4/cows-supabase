@@ -6,7 +6,7 @@ import { headers, cookies } from "next/headers";
 
 // do not cache this page
 export const revalidate = 0;
-
+export const runtime = 'edge'
 export default async function Post({
   params: { id },
 }: {
