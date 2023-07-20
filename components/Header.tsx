@@ -42,9 +42,6 @@ export const Header = () => {
 
   }, [users]);
 
-
-
-
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {

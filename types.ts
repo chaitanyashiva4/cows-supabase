@@ -7,6 +7,8 @@ export interface PageMeta {
 export interface Cart {
   id:string;
   customer_id:string;
+  count:number;
+  product_id:string;
 }
 export interface Customer {
   id: string /* primary key */;
@@ -26,6 +28,7 @@ export interface Product {
 export interface ProductWithPrice extends Product {
   prices?: Price[];
 }
+
 
 export interface UserDetails {
   id: string /* primary key */;

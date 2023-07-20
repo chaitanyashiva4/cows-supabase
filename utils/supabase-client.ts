@@ -24,6 +24,7 @@ export const getActiveProductsWithPrices = async (): Promise<
   return (data as any) || [];
 };
 
+
 export const deleteCartItem = async (id:any)=>{
   const { data, error } = await supabase
     .from('cart')
@@ -32,6 +33,21 @@ export const deleteCartItem = async (id:any)=>{
   if (error) {
     console.log(error.message);
   }
+  return (data as any) || [];
+};
+
+export const getActiveProductsCount= async (id:any): Promise<
+  Cart[]
+> => {
+  const { data, error } = await supabase
+    .from('cart')
+    .select('*,id,customer_id,count,product_id')
+    .eq('id',id)
+
+  if (error) {
+    console.log(error.message);
+  }
+  // TODO: improve the typing here.
   return (data as any) || [];
 };
 
@@ -88,6 +104,7 @@ export const updateUserName = async (user: User, name: string) => {
 export const getCartDataByUser = async (userID: any): Promise<
   Cart[]
 > => {
+  console.log("userId========",userID);
   const { data, error } = await supabase
     .from('cart')
     .select(`id, customer_id, product_id, count, 

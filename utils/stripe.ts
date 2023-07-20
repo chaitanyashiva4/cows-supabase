@@ -1,15 +1,49 @@
-import Stripe from 'stripe';
+import { Stripe, loadStripe } from '@stripe/stripe-js'
 
-export const stripe = new Stripe(
-  process.env.STRIPE_SECRET_KEY_LIVE ?? process.env.STRIPE_SECRET_KEY ?? '',
-  {
-    // https://github.com/stripe/stripe-node#configuration
-    apiVersion: '2022-11-15',
-    // Register this as an official Stripe plugin.
-    // https://stripe.com/docs/building-plugins#setappinfo
-    appInfo: {
-      name: 'Next.js Subscription Starter',
-      version: '0.1.0'
-    }
+let stripePromise: Promise<Stripe | null>
+
+const getStripe = () => {
+  if (!stripePromise) {
+    stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!)
   }
-);
+  return stripePromise
+}
+
+export default getStripe
+
+export async function fetchGetJSON(url: string) {
+  try {
+    const data = await fetch(url).then((res) => res.json())
+    return data
+  } catch (err) {
+    if (err instanceof Error) {
+      throw new Error(err.message)
+    }
+    throw err
+  }
+}
+
+
+export async function fetchPostJSON(url: string, data?: {}) {
+  try {
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json',
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *client
+      body: JSON.stringify(data || {}), // body data type must match "Content-Type" header
+    })
+    return await response.json() // parses JSON response into native JavaScript objects
+  } catch (err) {
+    if (err instanceof Error) {
+      throw new Error(err.message)
+    }
+    throw err
+  }
+}
